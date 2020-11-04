@@ -1,0 +1,71 @@
+@import "~@/styles/scss/_mixins";
+#app {
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333;
+    height: 100%;
+    min-width: 1200px;
+    // height: 500px;
+    min-height: 500px;
+    .el-scrollbar .el-scrollbar__wrap {overflow-x: hidden;} // 消除原生滚动条和elementUI滚动条样式冲突
+  
+  }
+  body{
+    // 表格
+    .el-table{
+      // overflow: auto;
+      &::before{
+        height: 0;
+      }
+    }
+    // .el-table__body-wrapper{
+    //   overflow: auto;
+    // }
+    .el-table th.is-leaf,.el-table th{
+      border-bottom: none;
+      background-color: rgba($color: $main-color, $alpha: 0.1)
+    }
+    .el-table td{
+      border-bottom: none;
+      // 高亮
+      em{
+        background-color: #ffcc00;
+        // font-weight: 600;
+      }
+    }
+    .el-table--striped .el-table__body tr.el-table__row--striped td {
+      background-color: #F8F8F8;
+      color: rgba($color:#000, $alpha: 0.8);
+    }
+    .el-table--enable-row-hover .el-table__body tr:hover > td {
+      // background-color: #8EC5FF;
+      background-color: #d9ecff;
+      // color: #fff;
+    }
+    .xia-tooltip{
+      em{
+        background-color: #ffcc00;
+        // font-weight: 600;
+      }
+    }
+    // 弹框
+    .el-dialog__header{
+      border-bottom: 1px solid rgba(0,0,0,0.10);
+      display: flex;
+      align-items: center;
+      .el-dialog__title{
+        color: rgba(0,0,0,0.40);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .el-dialog__headerbtn .el-dialog__close{
+        color: #909399;
+        font-weight:600;
+      }
+    }
+    .el-dialog{
+      border-radius: 4px;
+    }
+  }

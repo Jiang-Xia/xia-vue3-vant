@@ -1,0 +1,28 @@
+@import 'mixins';
+.dee-view-container{
+    min-width:1200px;
+    min-height: 800px; 
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.dee-nav-container{
+    height: $navbar-height;
+    background-color: #282828;
+    position: absolute;
+    min-width: 768px;
+    padding: 0 10px;
+    // @include flex-between();
+    display: flex;
+}
+.dee-main-container{
+    height: 100%;
+    background-color: #F1F2F8;
+    // padding: 70px 10px 0 10px;
+    padding-top:$navbar-height;
+}
+
+.dee-nav-container,.dee-main-container{
+    width: 100%;
+    font-size: $font-size-m;
+}

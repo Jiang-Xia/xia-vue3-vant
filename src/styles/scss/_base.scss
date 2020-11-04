@@ -1,0 +1,124 @@
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.el-main{
+  padding: 0px;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// /*滚动条样式*/
+// ::-webkit-scrollbar {/*滚动条整体样式*/
+//   width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+//   height: 4px;
+// }
+// ::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+//   border-radius: 5px;
+//   -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+//   background: rgba(0,0,0,0.1);
+// }
+// ::-webkit-scrollbar-track {/*滚动条里面轨道*/
+//   -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+//   border-radius: 0;
+//   background: rgba(0,0,0,0.1);
+// }
+
+// .el-dialog__header{
+//   background-color: #4FC3F7 !important;
+//   color: #fff;
+//   .el-dialog__title{
+//     color: #fff;
+//   }
+// }

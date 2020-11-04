@@ -1,0 +1,74 @@
+@import "variables";
+  //圆角
+@mixin border-radius($radius) {
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -o-border-radius:$radius;
+    border-radius:$radius;
+  }
+  // 设置阴影
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow:$shadow;
+    -moz-box-shadow:$shadow;
+    -o-box-shadow:$shadow;
+    box-shadow:$shadow;
+  }
+  // 绝对居中
+@mixin center($width, $height) {
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:$width;
+    height:$height;
+    margin:(-$height / 2) 0 0 (-$width / 2);
+  }
+
+  // flex-center
+  @mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+  }
+  
+  // flex-between
+  @mixin flex-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+   // flex-around
+   @mixin flex-around() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  //ellipsis
+  @mixin ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  //multi line ellipsis
+  @mixin multiline-ellipsis($num: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+    white-space: normal !important;
+    word-wrap: break-word;
+  }
+  /* clearfix */
+@mixin clearfix {
+  &:after {
+      clear: both;
+      content: '.';
+      display: block;
+      height: 0;
+      line-height: 0;
+      overflow: hidden;
+  }
+  *height: 1%;
+}
