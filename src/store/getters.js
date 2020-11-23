@@ -1,4 +1,4 @@
-// import { getInfo } from '@/utils/cookie'
+// import { getInfo } from './utils/cookie'
 function getInfo(){
   
 }

@@ -1,8 +1,8 @@
-import { handleLogin, handleUserInfo, handleLoginout } from '@/api/login.js'
-import { globalConfigs } from '@/api/common'
-import storage from '@/utils/storage'
-import { setToken, getToken, setInfo, removeToken, setExpires } from '@/utils/cookie'
-import { resetRouter } from '@/router'
+import { handleLogin, handleUserInfo, handleLoginout } from './api/login.js'
+import { globalConfigs } from './api/common'
+import storage from './utils/storage'
+import { setToken, getToken, setInfo, removeToken, setExpires } from './utils/cookie'
+import { resetRouter } from './router'
 
 export default {
   namespaced: true,

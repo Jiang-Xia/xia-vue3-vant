@@ -1,43 +1,28 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/home'
-// 固定路由
-export const constantRoutes = [
-//   {
-//     path: '/login',
-//     name: 'login',
-//     hidden: true,
-//     component: () => import('@/views/login/index-transfer'),
-//     meta: {
-//       title: '登录'
-//     }
-//   },
+import Layout from './modules/Layout'
+const routes = [
   {
     path: '/',
-    redirect: '/home',
-    hidden: true
+    name: '/',
+    redirect: '/home'
   },
   {
-    path: '/home',
-    component:Home,
-    hidden: true
+    path: '/login',
+    name: 'Rogin',
+    component: () => import('./views/login')
   },
   {
-    path: '/404',
-    name:'404',
-    // component: () => import('@/views/error-page/404'),
-    hidden: true
+    path: '/register',
+    name: 'Register',
+    component: () => import('./views/register')
   },
   {
-    path: '/401',
-    name:'401',
-    // component: () => import('@/views/error-page/401'),
-    hidden: true
-  }
+    path: '/setting',
+    name: 'Setting',
+    component: () => import('./views/my/setting')
+  },
+  Layout
 ]
-// 异步路由根据权限配置
-export const asyncRoutes = [
-  { path: '/:pathMatch(.*)', redirect: '/404', hidden: true }
-]
+
 export function resetRouter() {
   // const newRouter = createRouter()
   // router.matcher = newRouter.matcher
@@ -46,5 +31,4 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes:constantRoutes
 })
-
 export default router
